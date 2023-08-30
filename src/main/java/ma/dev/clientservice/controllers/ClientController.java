@@ -50,8 +50,7 @@ public class ClientController implements IClientController {
     @DeleteMapping("/clients/{id}")
     @Override
     public ResponseEntity<?> deleteClient(@PathVariable(name = "id") Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteClient'");
+        return clientService.deleteClient(id);
     }
 
 }

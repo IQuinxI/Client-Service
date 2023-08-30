@@ -55,9 +55,10 @@ public class ClientService implements IClientService {
     public ResponseEntity<?> newClient(Client newClient) {
         EntityModel<Client> entityModel = assembler.toModel(repository.save(newClient));
 
-        return ResponseEntity
-                .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri())
-                .body(entityModel);
+        // return ResponseEntity
+        //         .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri())
+        //         .body(entityModel);
+        return new ResponseEntity<>(entityModel, HttpStatus.CREATED);
     }
     // @Override
     // public ResponseEntity<?> newClient(Client newClient) {
