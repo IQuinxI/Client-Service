@@ -17,7 +17,6 @@ import ma.dev.clientservice.models.Client;
 import ma.dev.clientservice.services.ClientService;
 
 @RestController
-@RequestMapping(path = "/api")
 public class ClientController implements IClientController {
 
     @Autowired
