@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: client-service
+  config:
+    import: optional:configserver:http://localhost:8888
+rsa:
+  public-key: certs/public.pem

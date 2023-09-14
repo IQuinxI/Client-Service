@@ -12,9 +12,9 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner load(ClientRepository clientRepository) {
         return args -> {
-          clientRepository.save(new Client(null, "fname1", "lname1", 0612345667l, "contact@email.com"))  ;
-          clientRepository.save(new Client(null, "fname2", "lname2", 0612345667l, "contact@email.com"))  ;
-        
+            clientRepository.save(new Client(1L,"Joey","Tribianni","123456789","Joey@tribianni"));
+            clientRepository.save(new Client(2L,"Rachel","Green","123456789","Joey@tribianni"));
+            clientRepository.save(new Client(3L,"Ross","Geller","123456789","Joey@tribianni"));
           clientRepository.findAll().forEach(System.out::println);
           
         };
