@@ -1,19 +1,13 @@
 spring:
   application:
     name: client-service
-  # config:
-  #   import: optional:configserver:http://localhost:8888
+  config:
+    import: optional:configserver:http://localhost:8888
   cloud:
     discovery:
       enabled: true
-    config:
-      import-check:
-        enabled: false
-management: 
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+    
+
 eureka:
   instance:
     prefer-ip-address: true
