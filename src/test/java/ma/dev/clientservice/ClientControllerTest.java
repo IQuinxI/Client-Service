@@ -45,7 +45,7 @@ public class ClientControllerTest {
     @Test
     public void shouldGetAllClients() throws Exception {
         Client client = new Client(null, "fname5",
-                "lname5", 0612345667l, "contact@email.com");
+                "lname5", "0612345667l", "contact@email.com");
 
         EntityModel<Client> entityModel = EntityModel.of(client);
 
@@ -68,7 +68,7 @@ public class ClientControllerTest {
         mockClient.setFirstName("John");
         mockClient.setLastName("Doe");
         mockClient.setEmail("john.doe@example.com");
-        mockClient.setPhoneNumber(1234567890l);
+        mockClient.setPhoneNumber("1234567890");
 
         EntityModel<Client> entityModel = EntityModel.of(mockClient);
         // Mock the behavior of the service
@@ -82,7 +82,7 @@ public class ClientControllerTest {
                 .andExpect(jsonPath("$.firstName").value("John"))
                 .andExpect(jsonPath("$.lastName").value("Doe"))
                 .andExpect(jsonPath("$.email").value("john.doe@example.com"))
-                .andExpect(jsonPath("$.phoneNumber").value(1234567890l));
+                .andExpect(jsonPath("$.phoneNumber").value("1234567890"));
     }
 
     @Test
@@ -93,7 +93,7 @@ public class ClientControllerTest {
         newClient.setFirstName("John");
         newClient.setLastName("Doe");
         newClient.setEmail("john.doe@example.com");
-        newClient.setPhoneNumber(1234567890l);
+        newClient.setPhoneNumber("1234567890");
 
         ResponseEntity responseEntity = ResponseEntity
         .created(URI.create("http://localhost:8080/api/clients/"+newClient.getClientId()))
@@ -111,7 +111,7 @@ public class ClientControllerTest {
                 .andExpect(jsonPath("$.firstName").value("John"))
                 .andExpect(jsonPath("$.lastName").value("Doe"))
                 .andExpect(jsonPath("$.email").value("john.doe@example.com"))
-                .andExpect(jsonPath("$.phoneNumber").value(1234567890));
+                .andExpect(jsonPath("$.phoneNumber").value("1234567890"));
     }
 
     @Test
@@ -121,7 +121,7 @@ public class ClientControllerTest {
         newClient.setFirstName("John");
         newClient.setLastName("Doe");
         newClient.setEmail("john.doe@example.com");
-        newClient.setPhoneNumber(1234567890l);
+        newClient.setPhoneNumber("1234567890");
 
         ResponseEntity responseEntity = ResponseEntity
         .created(URI.create("http://localhost:8080/api/clients/"+newClient.getClientId()))
