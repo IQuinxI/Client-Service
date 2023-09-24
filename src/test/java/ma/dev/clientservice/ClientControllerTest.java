@@ -20,9 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.URI;
 import java.util.Collections;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import ma.dev.clientservice.controllers.ClientController;

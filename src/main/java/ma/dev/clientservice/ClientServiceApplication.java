@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-import ma.dev.clientservice.security.RsaKeyConfig;
+// import ma.dev.clientservice.security.RsaKeyConfig;
 
 @SpringBootApplication
-@EnableConfigurationProperties(RsaKeyConfig.class)
+// @EnableConfigurationProperties(RsaKeyConfig.class)
 @EnableDiscoveryClient
 public class ClientServiceApplication {
 
